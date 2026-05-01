@@ -1,290 +1,284 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-<style>
-  :root { --primary-blue: #003366; --secondary-gold: #ffcc00; --light-bg: #f4f7f9; }
-  body { font-family: 'Inter', sans-serif; background-color: var(--light-bg); color: #333; }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabdin Dikpora Wilayah IV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      :root { --primary-blue: #003366; --secondary-gold: #ffcc00; --light-bg: #f4f7f9; }
+      body { font-family: 'Inter', sans-serif; background-color: var(--light-bg); color: #333; }
+      
+      /* Navbar */
+      .navbar { background-color: var(--primary-blue) !important; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+      .nav-link { color: rgba(255,255,255,0.9) !important; font-weight: 500; }
+      .nav-link:hover { color: var(--secondary-gold) !important; }
+      
+      /* Dropdown Multi-level */
+      .dropdown-submenu { position: relative; }
+      .dropdown-submenu .dropdown-menu { top: 0; left: 100%; margin-top: -1px; }
+      .dropdown-submenu:hover > .dropdown-menu { display: block; }
+    
+      /* UI Elements */
+      .carousel-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.1), rgba(0, 51, 102, 0.8)); z-index: 1; }
+      .carousel-caption { z-index: 2; }
+      .stat-card { border: none; border-bottom: 4px solid var(--primary-blue); transition: transform 0.3s; }
+      .stat-card:hover { transform: translateY(-5px); }
+      .section-title { position: relative; padding-bottom: 15px; margin-bottom: 30px; font-weight: 700; color: var(--primary-blue); }
+      .section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 60px; height: 4px; background: var(--secondary-gold); }
+      
+      footer { background: #001a33; color: white; padding: 40px 0 20px; }
+      .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 20px; }
+      .hover-gold:hover {
+        color: var(--secondary-gold) !important;
+        text-decoration: underline !important;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
   
-  /* Navbar */
-  .navbar { background-color: var(--primary-blue) !important; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-  .nav-link { color: rgba(255,255,255,0.9) !important; font-weight: 500; }
-  .nav-link:hover { color: var(--secondary-gold) !important; }
+  <body>
   
-  /* Dropdown Multi-level */
-  .dropdown-submenu { position: relative; }
-  .dropdown-submenu .dropdown-menu { top: 0; left: 100%; margin-top: -1px; }
-  .dropdown-submenu:hover > .dropdown-menu { display: block; }
-
-  /* UI Elements */
-  .carousel-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.1), rgba(0, 51, 102, 0.8)); z-index: 1; }
-  .carousel-caption { z-index: 2; }
-  .stat-card { border: none; border-bottom: 4px solid var(--primary-blue); transition: transform 0.3s; }
-  .stat-card:hover { transform: translateY(-5px); }
-  .section-title { position: relative; padding-bottom: 15px; margin-bottom: 30px; font-weight: 700; color: var(--primary-blue); }
-  .section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 60px; height: 4px; background: var(--secondary-gold); }
-  
-  footer { background: #001a33; color: white; padding: 40px 0 20px; }
-  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 20px; }
-  .hover-gold:hover {
-    color: var(--secondary-gold) !important;
-    text-decoration: underline !important;
-    transition: 0.3s;
-  }
-</style>
-</head>
-<body>
-
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">
-      CABDIN DIKPORA <span class="text-warning text-uppercase">Wilayah IV</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto text-uppercase" style="font-size: 0.85rem;" id="main-nav-list">
-        <li class="nav-item"><a class="nav-link" href="#">Memuat Menu...</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="carousel-overlay"></div>
-        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200" class="d-block w-100" style="height: 500px; object-fit: cover;">
-        <div class="carousel-caption d-none d-md-block text-start mb-5 pb-5">
-          <h1 class="display-4 fw-bold">Mewujudkan Pendidikan Berkualitas</h1>
-          <p class="lead">Pelayanan prima untuk SMA, SMK, dan SLB di Wilayah IV.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <section class="container my-5">
-    <div class="row text-center g-4">
-      <div class="col-md-3"><div class="card stat-card shadow-sm p-3"><h3>🏫</h3><h3 id="stat-sekolah">0</h3><p>Sekolah</p></div></div>
-      <div class="col-md-3"><div class="card stat-card shadow-sm p-3"><h3>👨‍🏫</h3><h3 id="stat-guru">0</h3><p>Guru</p></div></div>
-      <div class="col-md-3"><div class="card stat-card shadow-sm p-3"><h3>🎓</h3><h3 id="stat-siswa">0</h3><p>Siswa</p></div></div>
-      <div class="col-md-3"><div class="card stat-card shadow-sm p-3"><h3>📍</h3><h3 id="stat-wilayah">0</h3><p>Wilayah</p></div></div>
-    </div>
-  </section>
-
-  <section class="container my-5">
-    <div class="row">
-      <div class="col-lg-8">
-        <h3 class="section-title text-uppercase">Berita Terbaru</h3>
-        <div class="row" id="news-container-main"></div>
-        <div class="collapse" id="moreNewsCollapse"><div class="row" id="news-container-more"></div></div>
-        <div class="text-center mt-4">
-          <button class="btn btn-outline-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#moreNewsCollapse" id="btnMoreNews" style="display:none;">BERITA LAINNYA</button>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <h3 class="section-title text-uppercase">Pengumuman</h3>
-        <div class="list-group list-group-flush shadow-sm rounded" id="announcement-list">
-          <div class="list-group-item">Cek berkala halaman ini untuk info terbaru.</div>
-        </div>
-      </div>
-      <div class="mt-4">
-        <h3 class="section-title text-uppercase">Arsip Dinamis</h3>
-        <div class="card shadow-sm border-0 mb-4">
-  <div class="card-header bg-white fw-bold">Unggah Arsip Baru</div>
-  <div class="card-body">
-    <form id="uploadForm">
-      <div class="mb-3">
-        <label class="form-label small">Nama Dokumen</label>
-        <input type="text" id="docName" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label class="form-label small">Pilih File (PDF/Gambar)</label>
-        <input type="file" id="fileInput" class="form-control" accept=".pdf,image/*" required>
-      </div>
-      <button type="submit" id="submitBtn" class="btn btn-primary w-100">
-        <i class="bi bi-cloud-arrow-up-fill me-2"></i>Unggah ke Drive
-      </button>
-    </form>
-    <div id="statusUpdate" class="mt-3 small text-center"></div>
-  </div>
-</div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-  <div class="container text-center text-md-start">
-    <div class="row">
-      <div class="col-md-6">
-        <h5 class="fw-bold mb-4">CABDIN DIKPORA WILAYAH IV</h5>
-        <p class="small opacity-75">Melayani pengelolaan pendidikan tingkat menengah di wilayah IV.</p>
-      </div>
-      <div class="col-md-2">
-        <h6 class="fw-bold mb-4">Link Cepat</h6>
-        <ul class="list-unstyled small opacity-75">
-          <li><a href="#" class="text-white text-decoration-none">Dapodik</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Portal PPDB</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <h6 class="fw-bold mb-4">Kontak</h6>
-        <p class="small opacity-75 mb-1">
-          📍 Jalan Garuda No. 247 Karang Dima, Labuhan Badas, Sumbawa, Nusa Tenggara Barat</br>
-          📞 (0371) 123456</br>
-          📧 <a href="mailto:ayanan.dikmen.plplk.sumbawa17@gmail.com" class="text-white text-decoration-none hover-gold">layanan.dikmen.plplk.sumbawa17@gmail.com
-              </a>
-        </p>
-      </div>
-    </div>
-    <div class="footer-bottom text-center">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
       <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          CABDIN DIKPORA <span class="text-warning text-uppercase">Wilayah IV</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-uppercase" style="font-size: 0.85rem;" id="main-nav-list">
+            <!-- Menu akan dimuat oleh JavaScript -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-overlay"></div>
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200" class="d-block w-100" style="height: 500px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block text-start mb-5 pb-5">
+            <h1 class="display-4 fw-bold">Mewujudkan Pendidikan Berkualitas</h1>
+            <p class="lead">Pelayanan prima untuk SMA, SMK, dan SLB di Wilayah IV.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <section class="container my-5">
+      <div class="row text-center g-4">
+        <div class="col-md-3"><div class="card stat-card shadow-sm p-3"><h3>🏫</h3><h3 id="stat-sekolah">0</h3><p>Sekolah</p></div></div>
+        <div class="col-md-3"><div class="card stat-card shadow-sm p-3"><h3>👨‍🏫</h3><h3 id="stat-guru">0</h3><p>Guru</p></div></div>
+        <div class="col-md-3"><div class="card stat-card shadow-sm p-3"><h3>🎓</h3><h3 id="stat-siswa">0</h3><p>Siswa</p></div></div>
+        <div class="col-md-3"><div class="card stat-card shadow-sm p-3"><h3>📍</h3><h3 id="stat-wilayah">0</h3><p>Wilayah</p></div></div>
+      </div>
+    </section>
+  
+    <section class="container my-5">
+      <div class="row">
+        <div class="col-lg-8">
+          <h3 class="section-title text-uppercase">Berita Terbaru</h3>
+          <div class="row" id="news-container-main"></div>
+          <div class="collapse" id="moreNewsCollapse"><div class="row" id="news-container-more"></div></div>
+          <div class="text-center mt-4">
+            <button class="btn btn-outline-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#moreNewsCollapse" id="btnMoreNews" style="display:none;">BERITA LAINNYA</button>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h3 class="section-title text-uppercase">Pengumuman</h3>
+          <div class="list-group list-group-flush shadow-sm rounded" id="announcement-list">
+            <!-- Pengumuman dimuat oleh JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <footer>
+      <div class="container text-center text-md-start">
         <div class="row">
-          <div class="col-12">
-            <p class="mb-2 opacity-50">
-              &copy; 2026 Cabang Dinas Pendidikan, Pemuda, dan Olahraga Wilayah IV
+          <div class="col-md-6">
+            <h5 class="fw-bold mb-4">CABDIN DIKPORA WILAYAH IV</h5>
+            <p class="small opacity-75">Melayani pengelolaan pendidikan tingkat menengah di wilayah IV (Sumbawa & Sumbawa Barat).</p>
+          </div>
+          <div class="col-md-2">
+            <h6 class="fw-bold mb-4">Link Cepat</h6>
+            <ul class="list-unstyled small opacity-75">
+              <li><a href="#" class="text-white text-decoration-none">Dapodik</a></li>
+              <li><a href="#" class="text-white text-decoration-none">Portal PPDB</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h6 class="fw-bold mb-4">Kontak</h6>
+            <p class="small opacity-75 mb-1">
+              📍 Jalan Garuda No. 247 Karang Dima, Labuhan Badas, Sumbawa, NTB<br>
+              📞 (0371) 123456<br>
+              📧 <a href="mailto:layanan.dikmen.plplk.sumbawa17@gmail.com" class="text-white text-decoration-none hover-gold">layanan.dikmen.plplk.sumbawa17@gmail.com</a>
             </p>
-            <div class="small" style="color: rgba(255,255,255,0.85);">
-              <span>Dikembangkan oleh: </span>
-              <span class="fw-bold text-warning">
-                <a href="mailto:profaan83.theone@gmail.com" class="text-white text-decoration-none hover-gold">Zainul Ikhsan Hakim</a>
-              </span>
-              <div class="mt-1 text-white-50">
-                Pranata Komputer Ahli Pertama
+          </div>
+        </div>
+        <div class="footer-bottom text-center">
+          <p class="mb-2 opacity-50">&copy; 2026 Cabang Dinas Pendidikan, Pemuda, dan Olahraga Wilayah IV</p>
+          <div class="small" style="color: rgba(255,255,255,0.85);">
+            Dikembangkan oleh: <span class="fw-bold text-warning">Zainul Ikhsan Hakim</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <script>
+      // DATA STATIS (Ubah di sini untuk update konten)
+      const DATA_MENU = [
+        { title: "Beranda", link: "#", isDropdown: false },
+        { title: "Profil", link: "#", isDropdown: true, subMenu: [
+          { title: "Visi & Misi", link: "#" },
+          { title: "Struktur Organisasi", link: "#" },
+          { title: "Tugas & Fungsi", link: "#" }
+        ]},
+        { title: "Informasi", link: "#", isDropdown: true, subMenu: [
+          { title: "Data Sekolah", link: "#" },
+          { title: "Data Guru", link: "#" },
+          { title: "Download Dokumen", link: "#" }
+        ]},
+        { title: "Kontak", link: "#", isDropdown: false }
+      ];
+
+      const DATA_STATS = { sekolah: 52, guru: 1420, siswa: 18500, wilayah: 4 };
+
+      const DATA_NEWS = [
+        {
+          judul: "Rapat Koordinasi Persiapan PPDB 2026",
+          tanggal: "15 Mei 2026",
+          ringkasan: "Pembahasan teknis penerimaan peserta didik baru tingkat SMA/SMK se-Wilayah IV.",
+          image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800",
+          konten: "Isi berita lengkap mengenai rapat koordinasi PPDB..."
+        },
+        {
+          judul: "Pelatihan Implementasi Kurikulum Merdeka",
+          tanggal: "10 Mei 2026",
+          ringkasan: "Meningkatkan kompetensi guru dalam mengadaptasi kurikulum terbaru di sekolah.",
+          image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800",
+          konten: "Isi berita lengkap mengenai pelatihan guru..."
+        }
+      ];
+
+      const DATA_ANNOUNCEMENTS = [
+        { judul: "Jadwal Ujian Sekolah 2026", info: "Penting", link: "#" },
+        { judul: "Penerimaan GTT/PTT Baru", info: "Lowongan", link: "#" }
+      ];
+
+      // LOGIKA RENDER (Jangan diubah kecuali perlu modifikasi tampilan)
+      document.addEventListener('DOMContentLoaded', function() {
+        renderMenu(DATA_MENU);
+        renderStats(DATA_STATS);
+        renderNews(DATA_NEWS);
+        renderAnnouncements(DATA_ANNOUNCEMENTS);
+      });
+  
+      function renderMenu(menuData) {
+        const navList = document.getElementById('main-nav-list');
+        function buildMenu(items, isSub = false) {
+          return items.map(item => {
+            if (item.isDropdown && item.subMenu && item.subMenu.length > 0) {
+              const subContent = buildMenu(item.subMenu, true);
+              if (!isSub) {
+                return `<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">${item.title}</a><ul class="dropdown-menu">${subContent}</ul></li>`;
+              } else {
+                return `<li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">${item.title}</a><ul class="dropdown-menu">${subContent}</ul></li>`;
+              }
+            } else {
+              const classType = isSub ? "dropdown-item" : "nav-link";
+              return `<li class="nav-item"><a class="${classType}" href="${item.link}">${item.title}</a></li>`;
+            }
+          }).join('');
+        }
+        navList.innerHTML = buildMenu(menuData);
+      }
+  
+      function renderStats(data) {
+        document.getElementById('stat-sekolah').innerText = data.sekolah;
+        document.getElementById('stat-guru').innerText = data.guru;
+        document.getElementById('stat-siswa').innerText = data.siswa;
+        document.getElementById('stat-wilayah').innerText = data.wilayah;
+      }
+  
+      function renderNews(newsData) {
+        const mainContainer = document.getElementById('news-container-main');
+        const moreContainer = document.getElementById('news-container-more');
+        const btnMore = document.getElementById('btnMoreNews');
+        
+        if (newsData.length === 0) {
+          mainContainer.innerHTML = '<p>Belum ada berita.</p>';
+          return;
+        }
+  
+        let mainHtml = '';
+        let moreHtml = '';
+  
+        newsData.forEach((news, index) => {
+          let card = `
+            <div class="col-md-6 mb-4">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="${news.image}" class="card-img-top" style="height:200px; object-fit:cover;">
+                <div class="card-body">
+                  <small class="text-primary fw-bold">${news.tanggal}</small>
+                  <h5 class="fw-bold mt-2">${news.judul}</h5>
+                  <p class="small text-muted">${news.ringkasan}</p>
+                  <button class="btn btn-link p-0 text-decoration-none fw-bold" onclick="showFullNews(${index})">Baca Selengkapnya →</button>
+                </div>
+              </div>
+            </div>`;
+          index < 4 ? mainHtml += card : moreHtml += card;
+        });
+  
+        mainContainer.innerHTML = mainHtml;
+        moreContainer.innerHTML = moreHtml;
+        if (newsData.length > 4) btnMore.style.display = 'inline-block';
+      }
+  
+      function showFullNews(index) {
+        const news = DATA_NEWS[index];
+        const modalHtml = `
+          <div class="modal fade" id="newsModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="fw-bold">${news.judul}</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="${news.image}" class="img-fluid rounded mb-3 w-100">
+                  <div class="small text-muted mb-3">Diterbitkan: ${news.tanggal}</div>
+                  <div>${news.konten}</div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  let allNewsData = [];
-
-  document.addEventListener('DOMContentLoaded', function() {
-    initApp();
-    setInterval(initApp, 60000); // Update setiap 1 menit
-  });
-
-  function initApp() {
-    google.script.run.withSuccessHandler(renderMenu).getNavigation();
-    google.script.run.withSuccessHandler(renderStats).getStatsData();
-    google.script.run.withSuccessHandler(renderNews).getNewsData();
-    google.script.run.withSuccessHandler(renderAnnouncements).getAnnouncementData();
-  }
-
-  function renderMenu(menuData) {
-    const navList = document.getElementById('main-nav-list');
-    function buildMenu(items, isSub = false) {
-      return items.map(item => {
-        if (item.isDropdown && item.subMenu && item.subMenu.length > 0) {
-          const subContent = buildMenu(item.subMenu, true);
-          if (!isSub) {
-            return `<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">${item.title}</a><ul class="dropdown-menu">${subContent}</ul></li>`;
-          } else {
-            return `<li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">${item.title}</a><ul class="dropdown-menu">${subContent}</ul></li>`;
-          }
-        } else {
-          const classType = isSub ? "dropdown-item" : "nav-link";
-          return `<li class="nav-item"><a class="${classType}" href="${item.link}">${item.title}</a></li>`;
+          </div>`;
+        const oldModal = document.getElementById('newsModal');
+        if (oldModal) oldModal.remove();
+        document.body.insertAdjacentHTML('beforeend', modalHtml);
+        new bootstrap.Modal(document.getElementById('newsModal')).show();
+      }
+  
+      function renderAnnouncements(data) {
+        const container = document.getElementById('announcement-list');
+        if (!data || data.length === 0) {
+          container.innerHTML = '<div class="list-group-item text-muted">Belum ada pengumuman terbaru.</div>';
+          return;
         }
-      }).join('');
-    }
-    navList.innerHTML = buildMenu(menuData);
-  }
-
-  function renderStats(data) {
-    document.getElementById('stat-sekolah').innerText = data.sekolah;
-    document.getElementById('stat-guru').innerText = data.guru;
-    document.getElementById('stat-siswa').innerText = data.siswa;
-    document.getElementById('stat-wilayah').innerText = data.wilayah;
-  }
-
-  function renderNews(newsData) {
-    allNewsData = newsData;
-    const mainContainer = document.getElementById('news-container-main');
-    const moreContainer = document.getElementById('news-container-more');
-    const btnMore = document.getElementById('btnMoreNews');
-    
-    if (newsData.length === 0) {
-      mainContainer.innerHTML = '<p>Belum ada berita.</p>';
-      return;
-    }
-
-    let mainHtml = '';
-    let moreHtml = '';
-
-    newsData.forEach((news, index) => {
-      let card = `
-        <div class="col-md-6 mb-4">
-          <div class="card border-0 shadow-sm h-100">
-            <img src="${news.image}" class="card-img-top" style="height:200px; object-fit:cover;">
-            <div class="card-body">
-              <small class="text-primary fw-bold">${news.tanggal}</small>
-              <h5 class="fw-bold mt-2">${news.judul}</h5>
-              <p class="small text-muted">${news.ringkasan}</p>
-              <button class="btn btn-link p-0 text-decoration-none fw-bold" onclick="showFullNews(${index})">Baca Selengkapnya →</button>
-            </div>
-          </div>
-        </div>`;
-      index < 4 ? mainHtml += card : moreHtml += card;
-    });
-
-    mainContainer.innerHTML = mainHtml;
-    moreContainer.innerHTML = moreHtml;
-    if (newsData.length > 4) btnMore.style.display = 'inline-block';
-  }
-
-  function showFullNews(index) {
-    const news = allNewsData[index];
-    const modalHtml = `
-      <div class="modal fade" id="newsModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="fw-bold">${news.judul}</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-              <img src="${news.image}" class="img-fluid rounded mb-3 w-100">
-              <div class="small text-muted mb-3">Diterbitkan: ${news.tanggal}</div>
-              <div>${news.konten}</div>
-            </div>
-          </div>
-        </div>
-      </div>`;
-    const oldModal = document.getElementById('newsModal');
-    if (oldModal) oldModal.remove();
-    document.body.insertAdjacentHTML('beforeend', modalHtml);
-    new bootstrap.Modal(document.getElementById('newsModal')).show();
-  }
-
-  function renderAnnouncements(data) {
-    const container = document.getElementById('announcement-list');
-    
-    if (!data || data.length === 0) {
-      container.innerHTML = '<div class="list-group-item text-muted">Belum ada pengumuman terbaru.</div>';
-      return;
-    }
-
-    let html = data.map(item => `
-      <a href="${item.link}" target="_blank" class="list-group-item list-group-item-action py-3">
-        <div class="d-flex w-100 justify-content-between">
-          <h6 class="mb-1 fw-bold text-primary">${item.judul}</h6>
-        </div>
-        <small class="text-muted">${item.info}</small>
-      </a>
-    `).join('');
-
-    container.innerHTML = html;
-  }
-</script>
-
-</body>
+        container.innerHTML = data.map(item => `
+          <a href="${item.link}" class="list-group-item list-group-item-action py-3">
+            <h6 class="mb-1 fw-bold text-primary">${item.judul}</h6>
+            <small class="text-muted">${item.info}</small>
+          </a>
+        `).join('');
+      }
+    </script>
+  </body>
 </html>
