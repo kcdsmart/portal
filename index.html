@@ -93,7 +93,25 @@
       </div>
       <div class="mt-4">
         <h3 class="section-title text-uppercase">Arsip Dinamis</h3>
-        <?!= include('arsip'); ?>
+        <div class="card shadow-sm border-0 mb-4">
+  <div class="card-header bg-white fw-bold">Unggah Arsip Baru</div>
+  <div class="card-body">
+    <form id="uploadForm">
+      <div class="mb-3">
+        <label class="form-label small">Nama Dokumen</label>
+        <input type="text" id="docName" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label small">Pilih File (PDF/Gambar)</label>
+        <input type="file" id="fileInput" class="form-control" accept=".pdf,image/*" required>
+      </div>
+      <button type="submit" id="submitBtn" class="btn btn-primary w-100">
+        <i class="bi bi-cloud-arrow-up-fill me-2"></i>Unggah ke Drive
+      </button>
+    </form>
+    <div id="statusUpdate" class="mt-3 small text-center"></div>
+  </div>
+</div>
       </div>
     </div>
   </section>
